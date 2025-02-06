@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@300;400;600&display=swap');
+
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+
+header {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 3%;
+    position: relative; /* For absolute positioning of mobile menu */
+}
+
+header img {
+    height: 90%;
+}
+
+/* Desktop Navigation */
+nav {
+    display: flex;
+    gap: 3vw;
+    width: fit-content;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #7A6E5A;
+    cursor: pointer;
+}
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+    color: #7A6E5A;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body{
+        width: 100vw;
+        margin: 0;
+    }
+    header {
+        height: auto;
+    }
+
+    header img{
+        /* height: ; */
+        width: 40%;
+    }
+
+    /* Show menu icon on mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide nav by default */
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    /* Show nav when active */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 10px 0;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .hero-img{
+        display: none;
+    }
+
+    .heropage{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .herotext {
+        display: none; /* Hide the desktop version */
+    }
+    
+    .mob-herotext {
+        margin-top: 10%;
+        display: flex;
+        display: block !important;  /* Ensure visibility */
+        
+    }
+    #destress{
+        font-size: 2.25rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    #giftline{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .mob-img{
+        display: block !important;
+        /* margin-top: -15%; */
+    }
+    
+    #zenaboutus{
+        width: 75% !important; 
+        margin-top: 10%;
+    }
+
+    .auanim p{
+        font-size: 1rem !important;
+    }
+
+    .auanim img{
+        width: 70% !important;
+    }
+
+    #aboutusimg{
+        opacity: 0.5 !important;
+    }
+    .prodtitle h1{
+        font-size: 2.5rem !important;
+        margin-bottom: 5%;
+    }
+
+    .proditem {
+        width: 80vw !important;
+        height: 60vh
+    }
+    .prodlist{
+        margin-bottom: 50px;
+    }
+
+    footer{
+        width: 100vw;
+    }
+
+    footer p a{
+        color: #fff;
+    }
+
+    #bttn a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #bttn{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem; /* 22px */
+    font-weight: 700;
+    padding: 12px 24px;
+    background-color: #43533A;
+    color: white;
+    border: none;
+    display: block;
+    margin: 10px auto; /* Centers horizontally */
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 65px;
+    }
+
+    footer {
+        max-width: 95vw;
+        margin-top: 5%;
+        background-color: #44402F;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Quicksand', sans-serif;
+    }
+}
+
+
+
+.mob-herotext{
+    display: none;
+}
+.heropage {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* align-items: center; */
+    width: 91vw;
+    height: fit-content;
+    margin-top: 5%;
+    /* padding: 20px; */
+}
+
+.hero-img {
+    width: 40%; 
+    max-width: 400px;
+    /* object-fit: cover; */
+}
+
+.herotext {
+    text-align: center;
+    max-width: 40%;
+    /* align-content: center; */
+    margin-top: 3%;
+}
+
+.heropage h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    color: #7A6E5A;
+}
+
+.heropage p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.56rem; /* 25px */
+    font-weight: 500;
+    margin: 10px 0;
+    color: #586B4D;
+}
+
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.375rem; /* 22px */
+    font-weight: 700;
+    padding: 12px 24px;
+    background-color: #43533A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 65px;
+}
+
+.auanim {
+    display: flex;
+    flex-direction: column; /* Stack text above image */
+    align-items: center; /* Center align items */
+    text-align: justify;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Paragraph Styling */
+.auanim p {
+    font-size: 2rem; /* 32px */
+    font-weight: 500; /* Medium */
+    line-height: 1.5;
+    max-width: 900px;
+}
+
+/* Image Styling */
+#aboutusimg {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Space between text and image */
+}
+
+.aboutus {
+    display: flex;
+    align-items: center; /* Vertically center align */
+    justify-content: center; /* Center everything horizontally */
+    gap: 1%;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+    margin-top: 7.5%;
+    flex-direction: column;
+}
+
+#zenaboutus {
+    width: 20%; /* Responsive size based on 300px width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px;
+}
+
+.auanim {
+    position: relative; /* Set relative positioning for child elements */
+    width: 80%; /* Make it responsive */
+    max-width: 667px; /* Based on Figma */
+    margin: auto;
+    text-align: justify;
+    padding: 20px;
+}
+
+.auanim p {
+    font-size: 2rem; /* 32px */
+    font-weight: 500; /* Medium */
+    line-height: 1.5;
+    position: relative;
+    color: #7A6E5A;
+    z-index: 2; /* Bring text to front */
+    padding: 10px;
+}
+
+/* Image Behind the Text */
+#aboutusimg {
+    position: absolute;
+    animation: rotateImage 5s linear infinite;
+     /* Center vertically */
+     /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 70%; /* Make it responsive */
+    max-width: 667px; /* Same as paragraph width */
+    opacity: 0.2; /* Make it slightly visible */
+    z-index: 1; /* Send it behind the text */
+}
+
+@keyframes rotateImage {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.product{
+    margin-top: 1.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /* padding-top: 5%; */
+    /* background-color: blanchedalmond; */
+}
+
+.prodtitle{
+    margin-top: 7.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prodtitle h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    color: #586B4D;
+}
+
+.prodlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.proditem{
+    height: 55vh;
+    width: 50vh;
+    background-color: #CEBFAA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    border-radius: 3%;
+}
+
+.proditem img{
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+.proditem h2{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem; /* 22px */
+    font-weight: 700;
+    color: #44402F;
+    margin-top: 7.5px;
+}
+
+.testing{
+    width: 100%;
+    height: 200vh;
+    background-color: aqua;
+}
+
+footer {
+    width: 100vw;
+    margin-top: 5%;
+    background-color: #44402F;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 120px; /* Adjust based on your logo size */
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons a {
+    color: #fff; /* Icons in blue */
+    font-size: 22.5px; /* Icon size */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1);
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.footer-text p a strong{
+    text-decoration: none;
+    color: white;
+}
+
+.mob-img{
+    display: none;
+}
+
